@@ -1,0 +1,45 @@
+.swiper-no-swiping{
+    --background: rgb(255, 185, 56);
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+ion-segment{
+    --background: #0072bc;
+}
+
+.container {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 30px;
+        span {
+            color: #fff;
+        }
+}
+
+ion-slides {
+    position: static;
+
+    .slide-inner {
+        width: 85%;
+        color: #fff;
+        background-color: #0072bc;
+        border-radius: 10px;
+
+        ion-item {
+            --background: rgba(255, 255, 255, 0.2);
+            --border-radius: 10px;
+
+            ion-input {
+                --color: #fff;
+            }
+        }
+    }
+}
