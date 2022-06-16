@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { User } from '../interfaces/user';
-import firebase from 'firebase/compat';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private afa: AngularFireAuth) {
-  
+  usuario: any;
+  constructor(private afa: AngularFireAuth, private afs: AngularFirestore) {
+    this.usuario = this.afs.collection<User>('usuario');
    }
 
   login(user: User){
@@ -16,7 +17,13 @@ export class AuthService {
   }
 
   register(user: User){
-    return this.afa.createUserWithEmailAndPassword(user.email, user.password);
+    return this.afa.createUserWithEmailAndPassword(user.email, user.password).then (cred => {
+      return this.afs.collection(this.usuario).doc(cred.user.uid).set({
+        nome: user.nome,
+        cpf: user.cpf,
+        tel: user.tel
+      })
+    });
   }
 
   logout(): void{

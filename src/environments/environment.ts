@@ -5,15 +5,15 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyC7WkXOvje40IdE88jBabMs8abNSRWvFJU",  
-    authDomain: "ondecomer-1fede.firebaseapp.com",  
-    projectId: "ondecomer-1fede",  
-    storageBucket: "ondecomer-1fede.appspot.com",  
-    messagingSenderId: "1001649055483",  
-    appId: "1:1001649055483:web:ed09efdf518dd5f48bb25e",  
-    measurementId: "G-3J4WRD7SDF"  
+  apiKey: "AIzaSyBiTUziRFJDW4chAoFWtyBlDAZsYtOGZ7s",
+  authDomain: "onde-comer-9c2d5.firebaseapp.com",
+  projectId: "onde-comer-9c2d5",
+  storageBucket: "onde-comer-9c2d5.appspot.com",
+  messagingSenderId: "1017749948820",
+  appId: "1:1017749948820:web:caa2a7ee4fdc3ab7ad2781",
+  measurementId: "G-YJY4FRZCGV"
   }
-  
+
 };
 
 /*
